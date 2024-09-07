@@ -46,7 +46,7 @@ const Privacy = styled.div`
   }
 
   a {
-    color: #3489DB;
+    color: #3498DB;
   }
 `;
 
