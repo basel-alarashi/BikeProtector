@@ -32,10 +32,12 @@ const Input = styled.input`
   border: 1px solid #979797;
   border-radius: 4px;
   outline: none;
+  transition: border-color .3s ease;
 
   &::placeholder {
     color: #979797;
     font-size: 14px;
+    transition: color .3s ease;
   }
 
   &:focus {
