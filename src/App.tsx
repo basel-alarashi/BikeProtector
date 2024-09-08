@@ -139,7 +139,8 @@ function App() {
 
             {isLoading
               ? <Loading />
-              : bikes.length <= 0 || (query.length > 0 && queryResult.length <= 0)
+              : bikes.length <= 0 || (query.length > 0 && queryResult.length <= 0) || (
+                date.start.length > 0 && date.end.length > 0 && dateResult.length <= 0)
                 ? <Empty />
                 : <BikesPage bikes={
                   query.length > 0
