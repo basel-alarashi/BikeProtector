@@ -66,7 +66,7 @@ function App() {
     const date1 = Date.parse(date.start);
     const date2 = Date.parse(date.end);
 
-    return bikes.filter(bike => date1 <= bike.date_stolen * 1000 && bike.date_stolen <= date2)
+    return bikes.filter(bike => date1 <= bike.date_stolen * 1000 && bike.date_stolen * 1000 <= date2)
   }, [bikes, date.start, date.end]);
 
   useEffect(() => {
