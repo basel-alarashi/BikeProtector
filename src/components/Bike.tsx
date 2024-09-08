@@ -52,6 +52,8 @@ const BikeStyle = styled.div`
 `;
 
 const Bike = ({ title, description, thumb, date_stolen, stolen_location }: IBike) => {
+  const stolenDate = new Date(date_stolen * 1000).toDateString();
+
   return (
     <BikeStyle>
       <img src={thumb || '/default-bike.svg'} alt="Bike Image" />
@@ -59,7 +61,7 @@ const Bike = ({ title, description, thumb, date_stolen, stolen_location }: IBike
         <div className="info">
           <p className="title">{title || ''}</p>
           <div>
-            <p><strong>Stolen at: </strong>{new Date(date_stolen).toDateString() || 'No Date'}</p>
+            <p><strong>Stolen at: </strong>{stolenDate || 'No Date'}</p>
             <p><strong>Location: </strong>{stolen_location || 'No Location'}</p>
           </div>
         </div>
